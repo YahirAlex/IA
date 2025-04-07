@@ -42,16 +42,18 @@ class Arbol:
             return self._buscarPorInorden(nodo.derecha, nombre)
         return None
 
-arbol = Arbol()
-nombres = ["Leonardo", "Valeria", "Hugo", "Camila", "Santiago",
-           "Diana", "Gabriel", "Ximena", "Isabela", "Bruno"]
-for nombre in nombres:
-arbol.insertar(nombre)
+if __name__ == "__main__":
+    arbol = Arbol()
+    nombres = ["Leonardo", "Valeria", "Hugo", "Camila", "Santiago",
+               "Diana", "Gabriel", "Ximena", "Isabela", "Bruno"]
+    for nombre in nombres:
+        arbol.insertar(nombre)
 
-# Buscar uno de ellos
-nodo = arbol.buscarNodo("Gabriel")
-if nodo:
-    print(f"Nodo se ha encontrado: {nodo.nombre}")
-else:
-    print("Nodo no hacido encontrado")
-print(f"¿El árbol se encuentra vacio? {arbol.vacio()}")
+    nodo = arbol.buscarNodo("Gabriel")
+    if nodo:
+        print(f"Nodo se ha encontrado: {nodo.nombre}")
+    else:
+        print("Nodo no ha sido encontrado")
+
+    print(f"¿El árbol se encuentra vacío? {arbol.vacio()}")
+
