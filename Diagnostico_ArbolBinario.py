@@ -42,13 +42,11 @@ class Arbol:
             return self._buscarPorInorden(nodo.derecha, nombre)
         return None
 
-# ⚙️ Uso del árbol con 10 nombres distintos
 arbol = Arbol()
 nombres = ["Leonardo", "Valeria", "Hugo", "Camila", "Santiago",
            "Diana", "Gabriel", "Ximena", "Isabela", "Bruno"]
-
 for nombre in nombres:
-    arbol.insertar(nombre)
+arbol.insertar(nombre)
 
 # Buscar uno de ellos
 nodo = arbol.buscarNodo("Gabriel")
